@@ -10,6 +10,7 @@ let x2Speed = 3;  // speed in X direction
 let y2Speed = 7; // speed in Y direction
 let d2 = 20;      // diameter of the ball
 
+
 function setup() {
   createCanvas(400, 400);
 }
@@ -29,7 +30,7 @@ function draw() {
     y1Speed = y1Speed * -1;
   }
   y1 = y1 + y1Speed;
-  fill(random(255),random(255),random(255))
+  fill(random(255))
   circle(x1, y1, d1);
   // second shape 
   
@@ -47,6 +48,5 @@ function draw() {
   y2 = y2 + y2Speed;
 
   rect(y1, y2, d2);
+
 }
-
-
