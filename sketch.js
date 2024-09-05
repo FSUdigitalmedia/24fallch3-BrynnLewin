@@ -9,11 +9,19 @@ let y2 = 90;       // y position of the ball
 let x2Speed = 3;  // speed in X direction
 let y2Speed = 7; // speed in Y direction
 let d2 = 20;      // diameter of the ball
+//third ball
+let x3 = 100;
+let y3 = 100;
+let x3Speed = 3;
+let y3Speed = 7;
+let d3 = 20;
 
 
 function setup() {
   createCanvas(400, 400);
 }
+
+
 
 function draw() {
   background(244,25); // try commenting this out!
@@ -32,6 +40,7 @@ function draw() {
   y1 = y1 + y1Speed;
   fill(random(255))
   circle(x1, y1, d1);
+  
   // second shape 
   
   // if x hits the right side or the left side of the canvas,
@@ -48,5 +57,19 @@ function draw() {
   y2 = y2 + y2Speed;
 
   rect(y1, y2, d2);
+
+  //third shape
+  if (x3 > width || x3 < 0) {
+    x3Speed = x3Speed * -1;
+  }
+  x3 = x3 + x3Speed; // adding a negative xSpeed *decreases* x, right?
+
+  // same as above, but for the top and bottom of the canvas
+  if (y3 > width || y3 < 0) {
+    y3Speed = y3Speed * -1;
+  }
+  y3 = y3 + y3Speed;
+  fill(random(255),random(255),random(255))
+  circle(mouseX,mouseY,d3)
 
 }
