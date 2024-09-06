@@ -56,7 +56,7 @@ function draw() {
   }
   y2 = y2 + y2Speed;
 
-  rect(y1, y2, d2);
+  circle(y1, y2, d2);
 
   //third shape
   if (x3 > width || x3 < 0) {
@@ -70,6 +70,6 @@ function draw() {
   }
   y3 = y3 + y3Speed;
   fill(random(255),random(255),random(255))
-  circle(mouseX,mouseY,d3)
+  rect(mouseX,mouseY,d3)
 
 }
